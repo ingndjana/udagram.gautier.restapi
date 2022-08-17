@@ -2,7 +2,7 @@
 
 ### Depot git
 
-https://github.com/Udacity-Scolarship/image.filter.resapi
+https://github.com/ingndjana/udagram.gautier.restapi
 
 ### End point URL
 
