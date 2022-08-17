@@ -28,7 +28,7 @@ require("dotenv").config();
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   app.get("/filteredimage", async (req, res) => {
-    const imageURL = req.query.image_url;
+    const imageURL: string = req.query.image_url;
 
     // 1. validate the image_url query
     if (!imageURL) {
@@ -39,7 +39,7 @@ require("dotenv").config();
     const result = await filterImageFromURL(imageURL);
 
     // 3. send the resulting file in the response
-    res.status(201).send(result);
+    res.status(200).send(result);
 
     // 4. deletes any files on the server on finish of the response
     await deleteLocalFiles([result]);
